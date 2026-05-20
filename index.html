@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SiteForge AI - studio stron z AI</title>
+    <meta
+      name="description"
+      content="Płatny system sprzedaży stron: brief klienta, streszczenie AI, rozmowa handlowa, demo strony i wdrożenie WordPress."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <canvas id="network" aria-hidden="true"></canvas>
+    <div class="cursor-glow" aria-hidden="true"></div>
+    <div class="scanline" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand magnetic" href="#top" aria-label="SiteForge AI">
+        <span class="brand-mark"></span>
+        <span>SiteForge AI</span>
+      </a>
+      <nav class="nav" aria-label="Główna nawigacja">
+        <a href="#system">System</a>
+        <a href="#brief">Brief</a>
+        <a href="#sales">Sprzedaż</a>
+        <a href="#client-sites">Gotowe strony</a>
+      </nav>
+      <a class="ghost-button magnetic" href="#brief">Zbierz brief</a>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">AI website sales machine</p>
+          <h1>Nie darmowy generator. Twój system do sprzedawania stron klientom.</h1>
+          <p class="lead">
+            Klient wysyła brief, AI robi Ci streszczenie i plan rozmowy, Ty dzwonisz z konkretną
+            wyceną. Po akceptacji agent tworzy demo strony, a Ty wdrażasz je na domenie, hostingu
+            i WordPressie.
+          </p>
+          <div class="hero-actions">
+            <a class="primary-button magnetic" href="#brief">Zobacz brief sprzedażowy</a>
+            <a class="secondary-button magnetic" href="#sales">Jak zarabia</a>
+          </div>
+          <div class="trust-strip">
+            <span>Brief pod wycenę</span>
+            <span>AI summary</span>
+            <span>Demo po akceptacji</span>
+            <span>WordPress + Elementor</span>
+          </div>
+        </div>
+
+        <aside class="signal-panel tilt-card reveal" aria-label="Panel sprzedażowy">
+          <div class="status-row">
+            <span class="pulse"></span>
+            <span>Sales pipeline active</span>
+          </div>
+          <div class="deal-card">
+            <span class="deal-label">Dzisiejszy lead</span>
+            <strong>Salon Beauty Glow</strong>
+            <p>Brak strony. Instagram aktywny. Potrzeba: rezerwacje, cennik, lokalizacja.</p>
+          </div>
+          <div class="metric-grid">
+            <div>
+              <strong>1</strong>
+              <span>brief od klienta</span>
+            </div>
+            <div>
+              <strong>AI</strong>
+              <span>streszczenie rozmowy</span>
+            </div>
+            <div>
+              <strong>PLN</strong>
+              <span>wycena po telefonie</span>
+            </div>
+            <div>
+              <strong>WP</strong>
+              <span>wdrożenie po zgodzie</span>
+            </div>
+          </div>
+          <div class="terminal">
+            <span>> brief.received: client wants premium website</span>
+            <span>> ai.summary: pain points + offer angle ready</span>
+            <span>> sales.call: pricing decision required</span>
+            <span>> demo.site: locked until client approves budget</span>
+          </div>
+        </aside>
+      </section>
+
+      <section id="system" class="band reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Model działania</p>
+          <h2>Klient nie dostaje generatora. Klient dostaje ofertę od Ciebie.</h2>
+        </div>
+        <div class="workflow">
+          <article class="tilt-card">
+            <span>01</span>
+            <h3>Lead i wiadomość</h3>
+            <p>AI znajduje firmę bez dobrej strony, a system wysyła link do formularza briefu.</p>
+          </article>
+          <article class="tilt-card">
+            <span>02</span>
+            <h3>Brief i streszczenie</h3>
+            <p>Odpowiedzi trafiają do bazy, a skrypt układa skrót: potrzeby, budżet, ryzyko, argumenty.</p>
+          </article>
+          <article class="tilt-card">
+            <span>03</span>
+            <h3>Telefon i wycena</h3>
+            <p>Ty dzwonisz, rozmawiasz o zakresie i ustalasz finansowo, czy projekt ma sens.</p>
+          </article>
+          <article class="tilt-card">
+            <span>04</span>
+            <h3>Demo i wdrożenie</h3>
+            <p>Po zgodzie agent tworzy testową stronę, a finalnie przenosisz ją na hosting i WordPress.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="brief" class="generator-layout">
+        <div class="form-panel reveal">
+          <div class="section-heading compact">
+            <p class="eyebrow">Brief kwalifikacyjny</p>
+            <h2>Formularz, który zbiera dane do sprzedaży</h2>
+            <p>
+              To nie jest przycisk “zrób mi stronę za darmo”. To formularz do zebrania informacji,
+              żebyś wiedział, ile powiedzieć przez telefon i jaki demo-projekt przygotować po zgodzie.
+            </p>
+          </div>
+          <form id="briefForm">
+            <label>
+              Nazwa firmy
+              <input name="company" placeholder="np. NovaDent Studio" value="NovaDent Studio" />
+            </label>
+            <label>
+              Branża
+              <input name="industry" placeholder="np. stomatologia, beauty, budowlanka" value="gabinet stomatologiczny" />
+            </label>
+            <label>
+              Cel strony
+              <select name="goal">
+                <option>pozyskiwanie telefonów i rezerwacji</option>
+                <option>sprzedaż usług premium</option>
+                <option>budowa zaufania do marki</option>
+                <option>więcej klientów lokalnych</option>
+              </select>
+            </label>
+            <label>
+              Budżet / potencjał rozmowy
+              <select name="budget">
+                <option>do ustalenia przez telefon</option>
+                <option>1500-3000 PLN</option>
+                <option>3000-6000 PLN</option>
+                <option>6000+ PLN</option>
+              </select>
+            </label>
+            <label>
+              Styl wizualny
+              <select name="style">
+                <option>minimalistyczny, technologiczny, premium</option>
+                <option>elegancki, spokojny, ekspercki</option>
+                <option>dynamiczny, odważny, sprzedażowy</option>
+                <option>lokalny, przyjazny, zaufany</option>
+              </select>
+            </label>
+            <label>
+              Najważniejsze usługi
+              <textarea name="services" rows="4">implanty, wybielanie, leczenie kanałowe, higienizacja</textarea>
+            </label>
+            <label>
+              Lokalizacja i ton komunikacji
+              <input name="tone" value="Warszawa Mokotów, ton nowoczesny i zaufany" />
+            </label>
+            <button class="primary-button submit magnetic" type="submit">Zbuduj streszczenie dla rozmowy</button>
+          </form>
+        </div>
+
+        <div id="demo" class="preview-panel reveal">
+          <div class="preview-header">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+            <strong>sales-summary.json</strong>
+          </div>
+          <pre id="promptPreview"></pre>
+        </div>
+      </section>
+
+      <section id="sales" class="sales-band reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Sprzedaż</p>
+          <h2>Masz prowadzić rozmowę jak studio, nie jak automat.</h2>
+        </div>
+        <div class="sales-grid">
+          <article class="money-card tilt-card">
+            <span>Etap 1</span>
+            <h3>Brief jest darmowy</h3>
+            <p>Klient tylko opisuje firmę. Nie dostaje gotowej strony ani plików.</p>
+          </article>
+          <article class="money-card tilt-card featured">
+            <span>Etap 2</span>
+            <h3>Wycena po rozmowie</h3>
+            <p>Ty decydujesz: mała wizytówka, premium one-page, pełny WordPress albo abonament.</p>
+          </article>
+          <article class="money-card tilt-card">
+            <span>Etap 3</span>
+            <h3>Demo po zgodzie</h3>
+            <p>Agent robi testową stronę dla Ciebie. Pokazujesz ją klientowi dopiero jako element sprzedaży.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="client-sites" class="client-sites reveal">
+        <div class="section-heading">
+          <p class="eyebrow">Gotowe strony klienta</p>
+          <h2>Folder na projekty, które potem wdrażasz na domenę i hosting.</h2>
+          <p>
+            Każdy zaakceptowany klient może dostać osobny katalog z gotowym demo. Na start przygotowałem
+            przykład dla gabinetu, żebyś widział format pracy.
+          </p>
+        </div>
+        <a class="client-preview magnetic" href="./gotowe-strony-klientow/novadent-studio/index.html">
+          <span>Demo klienta</span>
+          <strong>NovaDent Studio</strong>
+          <em>Otwórz gotową stronę testową</em>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <span>SiteForge AI</span>
+      <span>Brief -> AI summary -> rozmowa -> wycena -> demo -> WordPress -> płatność</span>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
