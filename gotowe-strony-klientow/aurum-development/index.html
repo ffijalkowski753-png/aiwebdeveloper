@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Aurum Development - apartamenty premium</title>
-    <meta name="description" content="Elegancka strona dewelopera z prezentacją inwestycji, lokalizacji i formularzem zainteresowania." />
+    <title>Aurum Development - apartamenty premium blisko centrum</title>
+    <meta
+      name="description"
+      content="Strona inwestycji deweloperskiej: apartamenty premium, lokalizacja, układy mieszkań, galeria, standard i formularz kontaktowy."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,52 +15,110 @@
   </head>
   <body>
     <header>
-      <a class="logo" href="#">Aurum Development</a>
-      <nav><a href="#investment">Inwestycja</a><a href="#apartments">Apartamenty</a><a href="#contact">Kontakt</a></nav>
+      <a class="logo" href="#top">Aurum Development</a>
+      <nav>
+        <a href="#investment">Inwestycja</a>
+        <a href="#standard">Standard</a>
+        <a href="#apartments">Apartamenty</a>
+        <a href="#contact">Kontakt</a>
+      </nav>
       <a class="button" href="#contact">Zapytaj o lokal</a>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero">
-        <div class="hero-media">
-          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=80" alt="Nowoczesny apartament premium" />
+        <div class="hero-media reveal">
+          <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1300&q=82" alt="Nowoczesny apartament premium" />
+          <div class="media-badge"><strong>Q4 2026</strong><span>planowany odbiór</span></div>
         </div>
-        <div class="hero-copy">
-          <span class="eyebrow">Nowa inwestycja</span>
-          <h1>Apartamenty zaprojektowane dla spokojnego życia blisko centrum.</h1>
-          <p>Kameralny budynek, zielone tarasy, podziemny parking i układy mieszkań dopasowane do pracy, rodziny i inwestycji.</p>
-          <div class="stats"><div><strong>42</strong><span>apartamenty</span></div><div><strong>Q4</strong><span>odbiór inwestycji</span></div><div><strong>6</strong><span>minut do centrum</span></div></div>
-        </div>
-      </section>
-
-      <section id="investment" class="section">
-        <span class="eyebrow">Inwestycja</span>
-        <h2>Strona prowadzi klienta od emocji do konkretnego zapytania.</h2>
-        <div class="features">
-          <article><h3>Lokalizacja</h3><p>Blisko komunikacji, usług i terenów zielonych, bez kompromisu w codziennym rytmie.</p></article>
-          <article><h3>Architektura</h3><p>Jasne elewacje, duże przeszklenia i części wspólne budujące poczucie klasy.</p></article>
-          <article><h3>Zakup</h3><p>Kontakt z doradcą, lista dostępnych lokali i szybka rezerwacja wybranego mieszkania.</p></article>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Kameralna inwestycja</p>
+          <h1>Apartamenty, które łączą miejski rytm z prywatnym spokojem.</h1>
+          <p>
+            Aurum Residence to 42 apartamenty z dużymi przeszkleniami, zielonymi tarasami i szybkim dostępem
+            do centrum. Strona prowadzi klienta od emocji po konkretne zapytanie o dostępny lokal.
+          </p>
+          <div class="actions">
+            <a class="button" href="#apartments">Sprawdź układy</a>
+            <a class="button light" href="#contact">Umów rozmowę</a>
+          </div>
         </div>
       </section>
 
-      <section id="apartments" class="apartments">
-        <div><span class="eyebrow">Apartamenty</span><h2>Wybrane układy</h2></div>
+      <section class="stats reveal">
+        <div><strong>42</strong><span>apartamenty</span></div>
+        <div><strong>38-112 m²</strong><span>powierzchnie lokali</span></div>
+        <div><strong>6 min</strong><span>do centrum</span></div>
+        <div><strong>2</strong><span>poziomy garażu</span></div>
+      </section>
+
+      <section id="investment" class="investment reveal">
+        <div>
+          <p class="eyebrow">Inwestycja</p>
+          <h2>Projekt zaprojektowany pod klientów, którzy kupują styl życia, nie tylko metry.</h2>
+        </div>
+        <div class="feature-copy">
+          <p>Komunikacja strony akcentuje ciszę, światło, prywatność i jakość części wspólnych. Klient od razu widzi, dlaczego warto zostawić kontakt.</p>
+          <p>Każda sekcja prowadzi do kolejnego kroku: poznania lokalizacji, wyboru metrażu i rozmowy z doradcą.</p>
+        </div>
+      </section>
+
+      <section id="standard" class="standard reveal">
+        <article>
+          <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=82" alt="Salon premium" />
+          <div><span>01</span><h3>Jasne wnętrza</h3><p>Duże przeszklenia, naturalne światło i układy mieszkań gotowe pod pracę z domu.</p></div>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1600607688969-a5bfcd646154?auto=format&fit=crop&w=900&q=82" alt="Nowoczesna kuchnia" />
+          <div><span>02</span><h3>Standard premium</h3><p>Materiały części wspólnych, kontrola dostępu, garaż i detale budujące poczucie klasy.</p></div>
+        </article>
+        <article>
+          <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=900&q=82" alt="Taras apartamentu" />
+          <div><span>03</span><h3>Prywatne tarasy</h3><p>Balkony, loggie i tarasy, które realnie zwiększają wartość codziennego życia.</p></div>
+        </article>
+      </section>
+
+      <section id="apartments" class="apartments reveal">
+        <div class="section-head">
+          <p class="eyebrow">Dostępne układy</p>
+          <h2>Trzy grupy mieszkań dla różnych decyzji zakupowych.</h2>
+        </div>
         <div class="plans">
-          <article><strong>45 m²</strong><span>2 pokoje, balkon</span></article>
-          <article><strong>68 m²</strong><span>3 pokoje, taras</span></article>
-          <article><strong>91 m²</strong><span>4 pokoje, narożny salon</span></article>
+          <article><strong>45 m²</strong><span>2 pokoje, balkon, idealne pod wynajem</span><a href="#contact">Zapytaj</a></article>
+          <article class="featured"><strong>68 m²</strong><span>3 pokoje, taras, najczęściej wybierany układ</span><a href="#contact">Zapytaj</a></article>
+          <article><strong>91 m²</strong><span>4 pokoje, narożny salon, apartament rodzinny</span><a href="#contact">Zapytaj</a></article>
         </div>
       </section>
 
-      <section id="contact" class="contact">
-        <div><span class="eyebrow">Kontakt</span><h2>Zapytaj o dostępność lokali.</h2></div>
+      <section class="location reveal">
+        <div>
+          <p class="eyebrow">Lokalizacja</p>
+          <h2>Wszystko blisko, ale bez wrażenia życia przy głównej arterii.</h2>
+        </div>
+        <div class="location-grid">
+          <span>Park 4 min</span>
+          <span>Tramwaj 3 min</span>
+          <span>Centrum 6 min</span>
+          <span>Szkoła 8 min</span>
+          <span>Restauracje 5 min</span>
+          <span>Garaż podziemny</span>
+        </div>
+      </section>
+
+      <section id="contact" class="contact reveal">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2>Zapytaj o dostępność i otrzymaj kartę lokalu.</h2>
+        </div>
         <form>
           <input placeholder="Imię i nazwisko" />
           <input placeholder="Telefon" />
-          <select><option>Interesuje mnie 2-pokojowe</option><option>3-pokojowe</option><option>4-pokojowe</option></select>
+          <select><option>Interesuje mnie 2-pokojowe</option><option>3-pokojowe</option><option>4-pokojowe</option><option>Zakup inwestycyjny</option></select>
           <button class="button" type="button">Wyślij zapytanie</button>
         </form>
       </section>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>

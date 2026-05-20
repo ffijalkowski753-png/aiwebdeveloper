@@ -3,72 +3,131 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Kancelaria Lexora - obsługa prawna firm</title>
-    <meta name="description" content="Nowoczesna strona kancelarii prawnej dla przedsiębiorców, spółek i kontraktów B2B." />
+    <title>Kancelaria Lexora - obsługa prawna firm w Warszawie</title>
+    <meta
+      name="description"
+      content="Kancelaria prawna dla przedsiębiorców: prawo spółek, umowy B2B, windykacja i stała obsługa prawna firm w Warszawie."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <header>
-      <a class="logo" href="#">Lexora</a>
-      <nav>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="logo" href="#top">Lexora</a>
+      <nav aria-label="Nawigacja">
         <a href="#services">Specjalizacje</a>
-        <a href="#approach">Proces</a>
+        <a href="#proof">Zaufanie</a>
+        <a href="#process">Proces</a>
         <a href="#contact">Kontakt</a>
       </nav>
       <a class="button" href="#contact">Umów konsultację</a>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero">
-        <div class="hero-text">
-          <span class="eyebrow">Kancelaria dla biznesu</span>
-          <h1>Prawo spółek, umowy i bezpieczeństwo decyzji biznesowych.</h1>
-          <p>
-            Pomagamy przedsiębiorcom uporządkować dokumenty, ograniczyć ryzyko i prowadzić negocjacje
-            z mocną pozycją prawną. Konkretna analiza, jasne rekomendacje, zero pustego formalizmu.
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Kancelaria dla przedsiębiorców</p>
+          <h1>Prawo, które chroni decyzje biznesowe zanim staną się problemem.</h1>
+          <p class="lead">
+            Lexora wspiera zarządy, wspólników i właścicieli firm w umowach, sporach, zmianach w spółkach
+            oraz stałej obsłudze prawnej. Bez prawniczego chaosu, z konkretną rekomendacją i jasnym planem działania.
           </p>
           <div class="actions">
-            <a class="button" href="#contact">Porozmawiaj z prawnikiem</a>
-            <a class="button light" href="#services">Zobacz zakres</a>
+            <a class="button" href="#contact">Skonsultuj sprawę</a>
+            <a class="button secondary" href="#services">Zobacz specjalizacje</a>
+          </div>
+          <div class="hero-stats">
+            <span><strong>48h</strong>wstępna analiza</span>
+            <span><strong>B2B</strong>umowy i spółki</span>
+            <span><strong>360°</strong>obsługa firm</span>
           </div>
         </div>
-        <div class="visual-card">
-          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=900&q=80" alt="Wnętrze kancelarii prawnej" />
-          <div>
-            <strong>24h</strong>
-            <span>wstępna odpowiedź dla stałych klientów</span>
+        <aside class="case-panel reveal">
+          <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1100&q=82" alt="Eleganckie wnętrze kancelarii prawnej" />
+          <div class="case-note">
+            <span>Aktualny priorytet</span>
+            <strong>Audyt umów handlowych przed negocjacjami</strong>
+            <p>Identyfikacja ryzyk, rekomendacje zmian i gotowe argumenty do rozmów z kontrahentem.</p>
           </div>
-        </div>
+        </aside>
       </section>
 
-      <section id="services" class="section">
-        <span class="eyebrow">Specjalizacje</span>
-        <h2>Wsparcie prawne tam, gdzie firma podejmuje ważne decyzje.</h2>
+      <section id="services" class="section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Specjalizacje</p>
+          <h2>Najważniejsze obszary wsparcia prawnego dla firm.</h2>
+        </div>
         <div class="cards">
-          <article><h3>Prawo spółek</h3><p>Zakładanie, zmiany w KRS, uchwały, relacje wspólników i bieżąca obsługa zarządu.</p></article>
-          <article><h3>Umowy B2B</h3><p>Tworzenie, negocjowanie i audyt umów z klientami, dostawcami oraz partnerami.</p></article>
-          <article><h3>Windykacja</h3><p>Strategia odzyskania należności bez przepalania czasu na chaotyczne działania.</p></article>
+          <article>
+            <span>01</span>
+            <h3>Prawo spółek</h3>
+            <p>Zmiany w KRS, uchwały, struktura udziałowa, konflikty wspólników i bezpieczeństwo zarządu.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Umowy B2B</h3>
+            <p>Tworzenie i negocjowanie kontraktów, zabezpieczenia płatności, odpowiedzialność i SLA.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Windykacja</h3>
+            <p>Przedsądowe działania, wezwania, ugody i strategia odzyskania należności bez strat wizerunkowych.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>Stała obsługa</h3>
+            <p>Dedykowany prawnik dla bieżących decyzji, dokumentów, rekrutacji, regulaminów i negocjacji.</p>
+          </article>
         </div>
       </section>
 
-      <section id="approach" class="split">
+      <section id="proof" class="proof reveal">
         <div>
-          <span class="eyebrow">Proces</span>
-          <h2>Najpierw rozumiemy ryzyko, potem proponujemy ruch.</h2>
+          <p class="eyebrow">Dlaczego Lexora</p>
+          <h2>Język biznesu zamiast paragrafów bez kontekstu.</h2>
         </div>
-        <div class="steps">
-          <p><strong>01.</strong> Krótki audyt sytuacji i dokumentów.</p>
-          <p><strong>02.</strong> Rekomendacja wariantów działania.</p>
-          <p><strong>03.</strong> Wdrożenie: dokumenty, negocjacje albo reprezentacja.</p>
+        <div class="proof-grid">
+          <p><strong>Ryzyko nazwane po imieniu.</strong> Każda analiza kończy się rekomendacją: co zrobić, czego nie podpisywać i gdzie negocjować.</p>
+          <p><strong>Dokumenty gotowe do użycia.</strong> Umowy, uchwały i pisma są pisane tak, żeby wspierały realne decyzje firmy.</p>
+          <p><strong>Stały kontakt.</strong> Klient wie, na jakim etapie jest sprawa, jakie są koszty i jaki ruch ma największy sens.</p>
         </div>
       </section>
 
-      <section id="contact" class="contact">
-        <span class="eyebrow">Kontakt</span>
-        <h2>Opisz sprawę i umów konsultację.</h2>
+      <section id="process" class="process reveal">
+        <div class="section-head">
+          <p class="eyebrow">Proces</p>
+          <h2>Od pierwszej rozmowy do konkretnego działania.</h2>
+        </div>
+        <ol>
+          <li><strong>Diagnoza</strong><span>Krótka rozmowa, dokumenty i określenie celu biznesowego.</span></li>
+          <li><strong>Analiza</strong><span>Ryzyka, warianty działania, rekomendowany plan i przewidywane koszty.</span></li>
+          <li><strong>Wdrożenie</strong><span>Negocjacje, dokumenty, pisma, reprezentacja albo stała obsługa.</span></li>
+        </ol>
+      </section>
+
+      <section class="faq reveal">
+        <div>
+          <p class="eyebrow">FAQ</p>
+          <h2>Pytania przed kontaktem</h2>
+        </div>
+        <details open>
+          <summary>Czy kancelaria pracuje z małymi firmami?</summary>
+          <p>Tak. Najczęściej wspieramy spółki, jednoosobowe działalności i firmy usługowe, które chcą uporządkować umowy oraz ryzyka.</p>
+        </details>
+        <details>
+          <summary>Czy można zacząć od jednego dokumentu?</summary>
+          <p>Tak. Audyt jednej umowy albo przygotowanie pisma często jest najlepszym startem do dalszej współpracy.</p>
+        </details>
+      </section>
+
+      <section id="contact" class="contact reveal">
+        <div>
+          <p class="eyebrow">Kontakt</p>
+          <h2>Opisz sprawę i otrzymaj propozycję następnego kroku.</h2>
+        </div>
         <form>
           <input placeholder="Imię i nazwisko" />
           <input placeholder="Telefon lub e-mail" />
@@ -76,10 +135,13 @@
             <option>Prawo spółek</option>
             <option>Umowa B2B</option>
             <option>Windykacja</option>
+            <option>Stała obsługa firmy</option>
           </select>
           <button class="button" type="button">Wyślij zapytanie</button>
         </form>
       </section>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>

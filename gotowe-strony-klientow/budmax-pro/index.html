@@ -3,8 +3,11 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Budmax Pro - budowa i remonty</title>
-    <meta name="description" content="Strona firmy budowlanej z realizacjami, ofertą i szybkim formularzem wyceny." />
+    <title>Budmax Pro - budowa domów i remonty pod klucz</title>
+    <meta
+      name="description"
+      content="Firma budowlana Budmax Pro: budowa domów, remonty, wykończenia wnętrz, realizacje i szybka wycena inwestycji."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
@@ -12,54 +15,102 @@
   </head>
   <body>
     <header>
-      <a class="logo" href="#">Budmax Pro</a>
-      <nav><a href="#services">Oferta</a><a href="#projects">Realizacje</a><a href="#quote">Wycena</a></nav>
+      <a class="logo" href="#top">Budmax Pro</a>
+      <nav>
+        <a href="#services">Oferta</a>
+        <a href="#projects">Realizacje</a>
+        <a href="#timeline">Proces</a>
+        <a href="#quote">Wycena</a>
+      </nav>
       <a class="button" href="#quote">Zamów wycenę</a>
     </header>
 
-    <main>
+    <main id="top">
       <section class="hero">
-        <div>
-          <span class="eyebrow">Budowa, remonty, wykończenia</span>
-          <h1>Solidne ekipy budowlane dla inwestorów, którzy chcą konkretów.</h1>
-          <p>Domy, lokale usługowe i kompleksowe remonty prowadzone z harmonogramem, dokumentacją i jasną komunikacją na każdym etapie.</p>
-          <div class="actions"><a class="button" href="#quote">Poproś o wycenę</a><a class="button light" href="#projects">Zobacz realizacje</a></div>
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Budowa i wykończenia</p>
+          <h1>Ekipa budowlana, która dowozi termin, zakres i porządek na inwestycji.</h1>
+          <p class="lead">
+            Budmax Pro realizuje domy, lokale usługowe i remonty pod klucz. Klient dostaje harmonogram,
+            jasny zakres prac, dokumentację postępu i ekipę, która komunikuje problemy zanim staną się kosztowne.
+          </p>
+          <div class="actions">
+            <a class="button" href="#quote">Wyceń inwestycję</a>
+            <a class="button ghost" href="#projects">Zobacz realizacje</a>
+          </div>
         </div>
-        <div class="site-photo">
-          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1000&q=80" alt="Plac budowy i konstrukcja budynku" />
-          <div><strong>12 lat</strong><span>doświadczenia wykonawczego</span></div>
+        <div class="hero-media reveal">
+          <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1200&q=82" alt="Nowoczesny plac budowy" />
+          <div class="overlay-card">
+            <strong>12 lat</strong>
+            <span>doświadczenia w realizacjach budowlanych</span>
+          </div>
         </div>
       </section>
 
-      <section id="services" class="section">
-        <span class="eyebrow">Oferta</span>
-        <h2>Od stanu surowego po gotowe wnętrze.</h2>
-        <div class="cards">
-          <article><h3>Budowa domów</h3><p>Realizacja etapami: fundamenty, konstrukcja, instalacje i prace wykończeniowe.</p></article>
-          <article><h3>Remonty lokali</h3><p>Modernizacje mieszkań, biur i punktów usługowych z kontrolą terminów.</p></article>
-          <article><h3>Wykończenia</h3><p>Gładzie, podłogi, łazienki, zabudowy i prace detalingowe pod odbiór.</p></article>
+      <section class="numbers reveal">
+        <div><strong>180+</strong><span>zakończonych etapów prac</span></div>
+        <div><strong>36</strong><span>stałych ekip i podwykonawców</span></div>
+        <div><strong>7 dni</strong><span>na przygotowanie wstępnego kosztorysu</span></div>
+      </section>
+
+      <section id="services" class="section reveal">
+        <div class="section-head">
+          <p class="eyebrow">Oferta</p>
+          <h2>Zakres prac od ciężkiej budowy po detal wykończenia.</h2>
+        </div>
+        <div class="service-grid">
+          <article><span>01</span><h3>Budowa domów</h3><p>Fundamenty, konstrukcja, dach, instalacje i koordynacja prac do stanu deweloperskiego.</p></article>
+          <article><span>02</span><h3>Remonty lokali</h3><p>Przebudowy mieszkań, biur i punktów usługowych z naciskiem na termin oddania.</p></article>
+          <article><span>03</span><h3>Wykończenia</h3><p>Łazienki, zabudowy, podłogi, gładzie, malowanie i prace precyzyjne pod odbiór.</p></article>
+          <article><span>04</span><h3>Koordynacja</h3><p>Plan prac, zamówienia materiałów, kontrola ekip i raporty dla inwestora.</p></article>
         </div>
       </section>
 
-      <section id="projects" class="projects">
-        <span class="eyebrow">Realizacje</span>
-        <h2>Projekty, które pokazują jakość przed pierwszym telefonem.</h2>
+      <section id="projects" class="projects reveal">
+        <div class="section-head">
+          <p class="eyebrow">Realizacje</p>
+          <h2>Zdjęcia, które sprzedają zaufanie przed pierwszym telefonem.</h2>
+        </div>
         <div class="gallery">
-          <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=700&q=80" alt="Prace konstrukcyjne" />
-          <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=700&q=80" alt="Ekipa budowlana" />
-          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=700&q=80" alt="Nowoczesny dom" />
+          <figure class="wide"><img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=1100&q=82" alt="Konstrukcja budynku" /><figcaption>Stan surowy domu jednorodzinnego</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=800&q=82" alt="Ekipa budowlana przy pracy" /><figcaption>Prace konstrukcyjne</figcaption></figure>
+          <figure><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=82" alt="Nowoczesny dom po budowie" /><figcaption>Gotowy dom pod odbiór</figcaption></figure>
         </div>
       </section>
 
-      <section id="quote" class="quote">
-        <div><span class="eyebrow">Wycena</span><h2>Opisz inwestycję i dostaniesz listę pytań do kalkulacji.</h2></div>
+      <section id="timeline" class="timeline reveal">
+        <div>
+          <p class="eyebrow">Proces</p>
+          <h2>Inwestor wie, co dzieje się na budowie.</h2>
+        </div>
+        <ol>
+          <li><strong>Oględziny</strong><span>Zakres, pomiary, zdjęcia i lista ryzyk.</span></li>
+          <li><strong>Kosztorys</strong><span>Materiały, robocizna, harmonogram i warianty budżetu.</span></li>
+          <li><strong>Realizacja</strong><span>Prace etapami, raporty i kontrola jakości.</span></li>
+          <li><strong>Odbiór</strong><span>Lista poprawek, dokumentacja i przekazanie inwestycji.</span></li>
+        </ol>
+      </section>
+
+      <section class="testimonial reveal">
+        <p>“Największa różnica? Wiedzieliśmy, co będzie robione w danym tygodniu i ile kosztują zmiany. To oszczędziło nam nerwów.”</p>
+        <span>Inwestor prywatny, dom 168 m²</span>
+      </section>
+
+      <section id="quote" class="quote reveal">
+        <div>
+          <p class="eyebrow">Szybka wycena</p>
+          <h2>Opisz inwestycję. Oddzwonimy z pytaniami do kalkulacji.</h2>
+        </div>
         <form>
           <input placeholder="Imię i telefon" />
           <input placeholder="Miasto inwestycji" />
-          <select><option>Budowa domu</option><option>Remont</option><option>Wykończenie</option></select>
-          <button class="button" type="button">Wyślij</button>
+          <select><option>Budowa domu</option><option>Remont lokalu</option><option>Wykończenie wnętrz</option><option>Koordynacja prac</option></select>
+          <button class="button" type="button">Wyślij zapytanie</button>
         </form>
       </section>
     </main>
+
+    <script src="./script.js"></script>
   </body>
 </html>
