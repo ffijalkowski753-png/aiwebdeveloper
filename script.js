@@ -1,5 +1,5 @@
 const form = document.querySelector("#briefForm");
-const promptPreview = document.querySelector("#promptPreview");
+const briefPreview = document.querySelector("#briefPreview");
 const canvas = document.querySelector("#network");
 const ctx = canvas.getContext("2d");
 const cursorGlow = document.querySelector(".cursor-glow");
@@ -10,57 +10,57 @@ function buildPrompt() {
     .split(",")
     .map((item) => item.trim())
     .filter(Boolean);
+  const serviceTags = services.map((service) => `<span>${service}</span>`).join("");
+  const mainService = services[0] || "najważniejszą usługę";
 
-  const summary = {
-    status: "brief ready for sales qualification and individual quote",
-    client: {
-      company: data.company,
-      industry: data.industry,
-      locationAndTone: data.tone,
-      budgetSignal: data.budget
-    },
-    callBrief: {
-      openingLine: `Dzień dobry, przeanalizowałem brief ${data.company}. Widzę, że główny cel to ${data.goal}.`,
-      questionsToAsk: [
-        "Czy strona ma głównie zbierać telefony, formularze czy rezerwacje?",
-        "Jakie usługi są najbardziej opłacalne i powinny być najmocniej pokazane?",
-        "Czy klient ma zdjęcia, opinie, logo i dostęp do hostingu?",
-        "Jaki termin i budżet są realne, zanim przygotujemy demo?"
-      ],
-      priceLogic: "Zakres i koszt warto potwierdzić podczas rozmowy, zanim powstanie projekt demo.",
-      suggestedOffer: "Strona WordPress + Elementor, struktura SEO, copywriting wspierany AI, formularz kontaktowy i wdrożenie."
-    },
-    demoPromptForAgent: {
-      role: "Senior website designer building a client website concept for WordPress and Elementor",
-      businessGoal: data.goal,
-      visualStyle: data.style,
-      sections: [
-        "hero z mocnym CTA",
-        "argumenty sprzedażowe",
-        "usługi i przewagi",
-        "proces / jak działa współpraca",
-        "opinie lub zaufanie",
-        "FAQ",
-        "kontakt"
-      ],
-      services
-    },
-    databaseMapping: {
-      company: "{{lead.company_name}}",
-      budget: "{{brief.budget_signal}}",
-      summary: "{{ai.sales_summary}}",
-      projectStatus: "{{project.qualified_after_call}}"
-    }
-  };
+  briefPreview.innerHTML = `
+    <section class="brief-card hero-brief">
+      <span class="mini-label">Rekomendacja</span>
+      <h3>${data.company}</h3>
+      <p>
+        Najlepszy kierunek to profesjonalna strona firmowa nastawiona na ${data.goal}.
+        Komunikacja powinna być ${data.style}, a pierwsza rozmowa powinna potwierdzić
+        zakres, materiały, termin i realny budżet.
+      </p>
+    </section>
 
-  promptPreview.textContent = JSON.stringify(summary, null, 2);
+    <section class="brief-card">
+      <span class="mini-label">Priorytety rozmowy</span>
+      <ul>
+        <li>Ustalić, które usługi mają największą wartość sprzedażową.</li>
+        <li>Sprawdzić, czy klient ma logo, zdjęcia, opinie i dostęp do hostingu.</li>
+        <li>Potwierdzić termin oraz budżet: ${data.budget}.</li>
+        <li>Ustalić, czy strona ma zbierać telefony, formularze czy rezerwacje.</li>
+      </ul>
+    </section>
+
+    <section class="brief-card">
+      <span class="mini-label">Proponowany zakres</span>
+      <div class="brief-offer">
+        <strong>WordPress + Elementor</strong>
+        <p>
+          Strona z mocnym nagłówkiem, sekcją usług, argumentami zaufania, formularzem
+          kontaktowym i strukturą SEO pod branżę: ${data.industry}.
+        </p>
+      </div>
+      <div class="tag-list">${serviceTags}</div>
+    </section>
+
+    <section class="brief-card next-step">
+      <span>Następny krok</span>
+      <strong>
+        Zacznij rozmowę od: “Widzę, że kluczowe jest ${mainService}. Ustalmy, jaki efekt biznesowy
+        ma dać strona i jaki zakres będzie najbardziej opłacalny.”
+      </strong>
+    </section>
+  `;
 }
 
 form.addEventListener("submit", (event) => {
   event.preventDefault();
   buildPrompt();
-  promptPreview.parentElement.classList.add("flash");
-  setTimeout(() => promptPreview.parentElement.classList.remove("flash"), 650);
+  briefPreview.parentElement.classList.add("flash");
+  setTimeout(() => briefPreview.parentElement.classList.remove("flash"), 650);
 });
 
 form.addEventListener("input", buildPrompt);
