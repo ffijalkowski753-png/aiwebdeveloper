@@ -1,0 +1,20 @@
+{
+  "fields": {
+    "company": "{{company}}",
+    "industry": "{{industry}}",
+    "goal": "{{goal}}",
+    "budget": "{{budget}}",
+    "style": "{{style}}",
+    "services": "{{services}}",
+    "tone": "{{tone}}"
+  },
+  "templates": {
+    "websiteDemo": "website-demo.prompt.md",
+    "salesSummary": "sales-summary.prompt.md",
+    "wordpressHandoff": "wordpress-handoff.prompt.md"
+  },
+  "output": {
+    "folderPattern": "gotowe-strony-klientow/{{client_slug}}",
+    "files": ["index.html", "styles.css", "script.js"]
+  }
+}
