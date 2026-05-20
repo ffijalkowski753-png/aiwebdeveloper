@@ -1,0 +1,55 @@
+{
+  "project": "SiteForge AI",
+  "version": "0.1-demo",
+  "agents": [
+    {
+      "id": "lead_hunter",
+      "name": "Lead Hunter",
+      "job": "Find businesses without a good website and enrich contact data.",
+      "inputs": ["industry", "city", "search_query"],
+      "outputs": ["company_name", "website_status", "email", "phone", "source_url"]
+    },
+    {
+      "id": "outreach_writer",
+      "name": "Outreach Writer",
+      "job": "Generate a personalized email that sends the prospect to the brief form.",
+      "inputs": ["company_name", "industry", "website_status", "source_url"],
+      "outputs": ["email_subject", "email_body", "brief_link"]
+    },
+    {
+      "id": "brief_mapper",
+      "name": "Brief Mapper",
+      "job": "Map form answers into structured database fields and prompt slots.",
+      "inputs": ["brief_form_submission"],
+      "outputs": ["brief_json", "prompt_variables"]
+    },
+    {
+      "id": "site_generator",
+      "name": "Site Generator",
+      "job": "Create copy, section structure, Elementor-ready layout data and WordPress draft instructions.",
+      "inputs": ["brief_json", "prompt_variables"],
+      "outputs": ["page_sections", "copy_blocks", "elementor_structure", "wordpress_payload"]
+    },
+    {
+      "id": "wordpress_publisher",
+      "name": "WordPress Publisher",
+      "job": "Publish or update a draft page after human approval.",
+      "inputs": ["wordpress_payload", "approval_status"],
+      "outputs": ["draft_url", "publish_status"]
+    }
+  ],
+  "databaseTables": [
+    "leads",
+    "brief_submissions",
+    "prompt_runs",
+    "generated_pages",
+    "outreach_messages"
+  ],
+  "nextBuildSteps": [
+    "Add backend API for form submissions.",
+    "Connect database.",
+    "Add OpenAI or Claude prompt execution.",
+    "Add WordPress REST API integration.",
+    "Add email automation and lead search workflow."
+  ]
+}
